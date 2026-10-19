@@ -276,3 +276,7 @@ Code Helper のディスク書き込み `.diag` と stickersd の JetsamEvent �
 これはChrome/VS Codeのクライアント切替やパネル位置のGUI検証を代替しません。
 
 ほかのビルドの方法は [docs/MAC-CLI.md](../docs/MAC-CLI.md)、全体の仕組みは [docs/DEVELOPMENT.md](../docs/DEVELOPMENT.md) にあります。
+
+## 更新通知
+
+Sparkle による「通知 → クリックで更新」を追加しています。入力メニューの「更新を確認…」から確認でき、通知は「新しいバージョンを通知」で切り替えます。配信鍵とリリース設定がないローカル版では更新チェックは動きません。作者向けの設定・検証手順は [UPDATES.md](UPDATES.md) を参照してください。
