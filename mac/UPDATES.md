@@ -14,6 +14,10 @@ Before relaunch, the active composition is committed. If no input client is avai
 
 Without a valid embedded public key, local builds show an explanation under 「更新を確認…」 and do not start network update checks. Do not put a test private key into release artifacts. The included local confirmation build deliberately has no production public key.
 
+## Build compatibility
+
+The default macos-15 CI image uses Swift 6.1. Pin swift-collections to 1.1.4 (tools version 5.7), which satisfies both the converter and Jinja constraints, rather than resolving 1.7.2 (requires tools version 6.4). Keep Package.resolved in sync. This dependency change does not enable production update delivery.
+
 ## Validation
 
 - `swiftc mac/Sources/MeltypeIME/MacUpdatePolicy.swift tools/test-mac-updater.swift -o /tmp/test-updater && /tmp/test-updater`

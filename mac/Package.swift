@@ -12,6 +12,8 @@ let package = Package(
     name: "MeltypeIME",
     platforms: [.macOS(.v13)],
     dependencies: [
+        // Keep transitive Collections compatible with the Swift 6.1 CI toolchain.
+        .package(url: "https://github.com/apple/swift-collections", exact: "1.1.4"),
         .package(url: "https://github.com/sparkle-project/Sparkle", exact: "2.10.0"),
         // main は API がよく変わるので、確かめたコミットに固定する (更新するときは Converter.swift も合わせて直す)。
         .package(url: "https://github.com/azooKey/AzooKeyKanaKanjiConverter", revision: "d59a28e4c7ca049aef04f29a91eae9677a7753f2"),
